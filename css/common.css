@@ -1,0 +1,14 @@
+/* Мінімальне оформлення галереї за допомогою Flexbox */
+.gallery {
+  display: flex;
+  list-style: none;
+  padding: 10px;
+}
+
+.gallery li {
+  margin: 20px;
+}
+.gallery img {
+  max-width: 100%;
+  height: auto;
+}
