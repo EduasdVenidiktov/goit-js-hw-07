@@ -25,23 +25,18 @@ const images = [
   },
 ];
 
-// Отримання елементу ul.gallery
-const galleryList = document.querySelector("ul.gallery");
-
-// Створення фрагменту для ефективного додавання всіх елементів в DOM
+const listGallery = document.querySelector(".gallery");
 const fragment = document.createDocumentFragment();
 
-// Створення та додавання елементів <li> з <img> в фрагмент
 images.forEach((image) => {
   const listItem = document.createElement("li");
-  const imageElement = document.createElement("img");
+  const imagItem = document.createElement("img");
 
-  imageElement.src = image.url;
-  imageElement.alt = image.alt;
+  imagItem.src = image.url;
+  imagItem.alt = image.alt;
 
-  listItem.appendChild(imageElement);
+  listItem.appendChild(imagItem);
   fragment.appendChild(listItem);
 });
 
-// Додавання фрагменту з усіма елементами в DOM за одну операцію
-galleryList.appendChild(fragment);
+listGallery.appendChild(fragment);

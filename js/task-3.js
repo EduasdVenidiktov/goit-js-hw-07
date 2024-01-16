@@ -1,24 +1,10 @@
 "use strict";
 
-// const nameInput = document.getElementById("name-input");
-// const nameOutput = document.getElementById("name-output");
+const elInput = document.getElementById("name-input");
+const elOutput = document.getElementById("name-output");
 
-// nameInput.addEventListener("input", () => {
-//   // Отримати значення інпуту та очистити від пробілів по краях
-//   const inputValue = nameInput.value.trim();
+elInput.addEventListener("input", () => {
+  const elTrim = elInput.value.trim();
 
-//   // Перевірити, чи інпут не порожній або не містить лише пробіли
-//   const displayName = inputValue !== "" ? inputValue : "Anonymous";
-
-//   // Підставити ім'я в спан для привітання
-//   nameOutput.textContent = displayName;
-// });
-
-const nameInput = document.getElementById("name-input");
-const nameOutput = document.getElementById("name-output");
-
-nameInput.addEventListener("input", () => {
-  const inputValue = nameInput.value.trim();
-
-  nameOutput.textContent = inputValue !== "" ? inputValue : "Anonymous";
+  elOutput.textContent = elTrim !== "" ? elTrim : "Anonymous";
 });

@@ -1,30 +1,19 @@
 "use strict";
 
-function handleSubmit(event) {
-  event.preventDefault(); // Зупинити дефолтну поведінку відправлення форми
+const registerForm = document.querySelector(".login-form");
 
-  const form = event.target;
-  const formData = {};
+registerForm.addEventListener("submit", handleSubmit);
 
-  // Перебір елементів форми
-  for (const input of form.elements) {
-    if (input.type !== "submit") {
-      const trimmedValue = input.value.trim(); // Очищення значення від пробілів
+function handleSubmit(ev) {
+  ev.preventDefault();
+  const form = ev.target;
+  const Email = form.elements.email.value.trim();
+  const Password = form.elements.password.value.trim();
 
-      // Перевірка на наявність значення
-      if (!trimmedValue) {
-        alert("All form fields must be filled in");
-        return;
-      }
-
-      // Додавання значення до об'єкту formData
-      formData[input.name] = trimmedValue;
-    }
+  if (!Email || !Password) {
+    return alert("All form fields must be filled in");
   }
 
-  // Виведення об'єкта з введеними даними в консоль
-  console.log(formData);
-
-  // Очищення значень полів форми
+  console.log(`Email: ${Email}, Password: ${Password}`);
   form.reset();
 }

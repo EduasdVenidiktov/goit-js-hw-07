@@ -1,4 +1,8 @@
 /* Мінімальне оформлення галереї за допомогою Flexbox */
+ul {
+  list-style: none;
+}
+
 .gallery {
   display: flex;
   list-style: none;
