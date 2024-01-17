@@ -193,7 +193,6 @@ button:hover {
 /* Стилізація для елемента .color у .widget */
 .widget .color {
   font-weight: bold;
-  color: #3498db; /* Колір тексту для .color */
 }
 
 /* Стилізація для кнопки .change-color у .widget */
