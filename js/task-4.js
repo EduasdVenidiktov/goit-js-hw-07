@@ -7,13 +7,13 @@ registerForm.addEventListener("submit", handleSubmit);
 function handleSubmit(ev) {
   ev.preventDefault();
   const form = ev.target;
-  const Email = form.elements.email.value.trim();
-  const Password = form.elements.password.value.trim();
+  const email = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
 
-  if (!Email || !Password) {
+  if (!email || !password) {
     return alert("All form fields must be filled in");
   }
 
-  console.log(`Email: ${Email}, Password: ${Password}`);
+  console.log(`Email: ${email}, Password: ${password}`);
   form.reset();
 }

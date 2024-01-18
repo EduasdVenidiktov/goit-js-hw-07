@@ -9,8 +9,8 @@ const inputValue = document.querySelector("input");
 const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
 
-const onCreateButton = btnCreate.addEventListener("click", createBox);
-const onDestroyButton = btnDestroy.addEventListener("click", destroyBox);
+btnCreate.addEventListener("click", createBox);
+btnDestroy.addEventListener("click", destroyBox);
 
 let size = 30;
 
@@ -21,14 +21,12 @@ function createBox() {
 
     for (let i = 0; i < amount; i++) {
       const newBox = document.createElement("div");
-      newBox.style.width = `${size}px`;
-      newBox.style.height = `${size}px`;
+      const boxSize = 30 + i * 10; // Обчислюємо розмір на основі індексу
+      newBox.style.width = `${boxSize}px`;
+      newBox.style.height = `${boxSize}px`;
       newBox.style.backgroundColor = getRandomHexColor();
       addBoxes.appendChild(newBox);
-
-      size += 10;
     }
-    size = 30;
     inputValue.value = "";
   }
 }

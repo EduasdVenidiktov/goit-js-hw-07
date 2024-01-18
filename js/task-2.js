@@ -30,12 +30,12 @@ const fragment = document.createDocumentFragment();
 
 images.forEach((image) => {
   const listItem = document.createElement("li");
-  const imagItem = document.createElement("img");
+  const imageItem = document.createElement("img");
 
-  imagItem.src = image.url;
-  imagItem.alt = image.alt;
+  imageItem.src = image.url;
+  imageItem.alt = image.alt;
 
-  listItem.appendChild(imagItem);
+  listItem.appendChild(imageItem);
   fragment.appendChild(listItem);
 });
 
